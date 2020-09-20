@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 39001
 
 logging:
   level:
@@ -31,8 +31,8 @@ spring:
             scope: message.read,message.write
         provider:
           spring:
-            authorization-uri: http://auth-server:9000/oauth2/authorize
-            token-uri: http://auth-server:9000/oauth2/token
+            authorization-uri: http://auth-server:39003/oauth2/authorize
+            token-uri: http://auth-server:39003/oauth2/token
 
 messages:
-  base-uri: http://localhost:8090/messages
+  base-uri: http://localhost:39002/messages
