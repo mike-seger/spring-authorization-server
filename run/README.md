@@ -4,6 +4,7 @@ These utilities are a shortcut and debugging enhancements for this: [README.adoc
 
 ## running all applications
 `./runall.sh`
+
 logs are written into ../build
 
 *IMPORTANT:* Make sure to modify your `/etc/hosts` described in: [README.adoc](../samples/boot/oauth2-integration/README.adoc)
