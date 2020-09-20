@@ -24,12 +24,6 @@ while read line ; do
     endpat=$(printf "%s\n" "$delims" | tail -1|sed -e "s/: .*//")
   fi
 
-#  echo $pat
-#  echo $endpat
-#  echo
-#  continue
-
-
   grep -A150 -a "^$pat" "$file" | \
     sed -n "/^$pat/,/$endpat/p;/$endpat/q" | \
     egrep -i -v -E -e "^(X-|Cache|Pragma|Expire|Connection:|\
