@@ -38,4 +38,5 @@ out/
 ### Mac ###
 .DS_Store
 
+!run/**/*.log
 *~

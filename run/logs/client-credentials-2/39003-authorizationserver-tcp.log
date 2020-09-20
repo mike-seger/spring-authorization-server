@@ -1,0 +1,25 @@
+2020.Sep.20 13:20:49: TCP Forwarding 127.0.0.1:54632 (unknown) <--> 127.0.0.1:39103 (unknown)
+
+up:
+GET /oauth2/jwks HTTP/1.1
+Accept: application/json, application/jwk-set+json
+User-Agent: Java/11.0.3
+Host: auth-server:39003
+Connection: keep-alive
+
+
+down:
+HTTP/1.1 200
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json;charset=ISO-8859-1
+Content-Length: 455
+Date: Sun, 20 Sep 2020 11:20:49 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{"keys":[{"kty":"RSA","e":"AQAB","use":"sig","kid":"b62a6075-a7ed-443e-8538-5b3518be7823","alg":"RS256","n":"uD9kG88aSsTZ8MrEyhwZJCi3GqHyYeQQcc28bwGdoouaAUUtrwVxBs6EFwVsq0UHg94dn0sv-nhlH4fKK0X36cKZS95MfVDJ3QIXCVIliNj2gMOf9zuksuJHLWNLSkTiSfZ6VnQvsM8-sIDOn3qHw7RdaeJgKKrA5AeUOEwMm09T9t0gr1_mitXj4pQMraWMlCu3i39__09CDS2iDmukt2UVOX42diDPK53TgA2I32GEpavz84aZGNZnYVlOOjAfDHgPgMzxkVtPoA2KWcY5LH-qr3xyFKwYoaEmgj_-2FlR_cf-zzswl5AB1fCG58J1rxWTCVackboz8z4Htwv9FQ"}]}

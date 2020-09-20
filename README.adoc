@@ -4,6 +4,8 @@ image:https://github.com/spring-projects-experimental/spring-authorization-serve
 
 = Spring Authorization Server
 
+NOTE: If you are only interested in running a client, resource-server and authentication-server, then go here: [README.md](run/READDME.ms)
+
 Spring Authorization Server is a community-driven project led by the https://spring.io/projects/spring-security/[Spring Security] team and is focused on delivering https://tools.ietf.org/html/rfc6749#section-1.1[OAuth 2.0 Authorization Server] support to the Spring community.
 
 The project will start in Spring's experimental projects as an independent project so that it can evolve more rapidly.
