@@ -1,12 +1,12 @@
 # run utilities
 
-These utilities are a shortcut and more for this: [README.adoc](../samples/boot/oauth2-integration/README.adoc)
- 
-## running all applications
-*IMPORTANT:* Make sure to modify your `/etc/hosts` described in: [README.adoc](../samples/boot/oauth2-integration/README.adoc)  
+These utilities are a shortcut and debugging enhancements for this: [README.adoc](../samples/boot/oauth2-integration/README.adoc)
 
+## running all applications
 `./runall.sh`
 logs are written into ../build
+
+*IMPORTANT:* Make sure to modify your `/etc/hosts` described in: [README.adoc](../samples/boot/oauth2-integration/README.adoc)
 
 ## logging TCP through tcptunnel (used by runall.sh)
 tcptunnel-1.2.0.jar - see https://github.com/mike-seger/java-tcp-tunnel
