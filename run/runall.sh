@@ -18,7 +18,7 @@ function logtcp() {
 	local intport=$3
 	local label=$4
 	(cd run ; java -jar tcptunnel-1.2.0.jar $port $host $intport \
-		--logger console-string >build/$port-$label-tcp.log &)
+		--logger console-string >../build/$port-$label-tcp.log &)
 }
 
 function runapp() {

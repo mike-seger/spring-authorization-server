@@ -1,0 +1,99 @@
+$ curl -v -L -b /tmp/cookie -c /tmp/cookie http://localhost:39001/authorize?grant_type=authorization_code
+*   Trying ::1...
+* TCP_NODELAY set
+* Connected to localhost (::1) port 39001 (#0)
+> GET /authorize?grant_type=authorization_code HTTP/1.1
+> Host: localhost:39001
+> User-Agent: curl/7.64.1
+> Accept: */*
+> Cookie: JSESSIONID=0C055A53D0ECCE6192E8B000CD5CB030
+>
+< HTTP/1.1 302
+* Replaced cookie JSESSIONID="593498B761141EA70A65E64D37660586" for domain localhost, path /, expire 0
+< Set-Cookie: JSESSIONID=593498B761141EA70A65E64D37660586; Path=/; HttpOnly
+< X-Content-Type-Options: nosniff
+< X-XSS-Protection: 1; mode=block
+< Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+< Pragma: no-cache
+< Expires: 0
+< X-Frame-Options: DENY
+< Location: http://auth-server:39003/oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read%20message.write&state=gvb8VFSJ9NZUSXHbfhzpugNbD-6zMBeSO5n9eZGOYKs%3D&redirect_uri=http://localhost:39001/authorized
+< Content-Length: 0
+< Date: Sun, 20 Sep 2020 14:20:07 GMT
+<
+* Connection #0 to host localhost left intact
+* Issue another request to this URL: 'http://auth-server:39003/oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read%20message.write&state=gvb8VFSJ9NZUSXHbfhzpugNbD-6zMBeSO5n9eZGOYKs%3D&redirect_uri=http://localhost:39001/authorized'
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to auth-server (127.0.0.1) port 39003 (#1)
+> GET /oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read%20message.write&state=gvb8VFSJ9NZUSXHbfhzpugNbD-6zMBeSO5n9eZGOYKs%3D&redirect_uri=http://localhost:39001/authorized HTTP/1.1
+> Host: auth-server:39003
+> User-Agent: curl/7.64.1
+> Accept: */*
+>
+< HTTP/1.1 302
+* Added cookie JSESSIONID="6A61E2A6EF82E8313C58073D9D0219D2" for domain auth-server, path /, expire 0
+< Set-Cookie: JSESSIONID=6A61E2A6EF82E8313C58073D9D0219D2; Path=/; HttpOnly
+< X-Content-Type-Options: nosniff
+< X-XSS-Protection: 1; mode=block
+< Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+< Pragma: no-cache
+< Expires: 0
+< X-Frame-Options: DENY
+< Location: http://auth-server:39003/login
+< Content-Length: 0
+< Date: Sun, 20 Sep 2020 14:20:07 GMT
+<
+* Connection #1 to host auth-server left intact
+* Issue another request to this URL: 'http://auth-server:39003/login'
+* Found bundle for host auth-server: 0x7f8c47c19c00 [can pipeline]
+* Could pipeline, but not asked to!
+* Re-using existing connection! (#1) with host auth-server
+* Connected to auth-server (127.0.0.1) port 39003 (#1)
+> GET /login HTTP/1.1
+> Host: auth-server:39003
+> User-Agent: curl/7.64.1
+> Accept: */*
+> Cookie: JSESSIONID=6A61E2A6EF82E8313C58073D9D0219D2
+>
+< HTTP/1.1 200
+< X-Content-Type-Options: nosniff
+< X-XSS-Protection: 1; mode=block
+< Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+< Pragma: no-cache
+< Expires: 0
+< X-Frame-Options: DENY
+< Content-Type: text/html;charset=UTF-8
+< Content-Length: 1406
+< Date: Sun, 20 Sep 2020 14:20:07 GMT
+<
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Please sign in</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"/>
+  </head>
+  <body>
+     <div class="container">
+      <form class="form-signin" method="post" action="/login">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <p>
+          <label for="username" class="sr-only">Username</label>
+          <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+        </p>
+        <p>
+          <label for="password" class="sr-only">Password</label>
+          <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+        </p>
+<input name="_csrf" type="hidden" value="5d427b1e-2178-4fd5-b9e8-1cf6ed887150" />
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+</div>
+* Connection #1 to host auth-server left intact
+</body></html>* Closing connection 0
+* Closing connection 1
