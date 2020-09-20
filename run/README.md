@@ -1,7 +1,6 @@
 # run utilities
 
-This utilities are a shortcut and more for this:  
-[README.adoc](../samples/boot/oauth2-integration/README.adoc)
+These utilities are a shortcut and more for this: [README.adoc](../samples/boot/oauth2-integration/README.adoc)
  
 ## running all applications
 *IMPORTANT:* Make sure to modify your `/etc/hosts` described in: [README.adoc](../samples/boot/oauth2-integration/README.adoc)  
