@@ -1,0 +1,85 @@
+2020.Sep.20 13:02:36: TCP Forwarding 0:0:0:0:0:0:0:1:54467 (unknown) <--> 127.0.0.1:39101 (unknown)
+
+up:
+GET /authorize?grant_type=client_credentials HTTP/1.1
+Host: localhost:39001
+User-Agent: curl/7.64.1
+Accept: */*
+
+
+down:
+HTTP/1.1 200 
+Set-Cookie: JSESSIONID=0C055A53D0ECCE6192E8B000CD5CB030; Path=/; HttpOnly
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: text/html;charset=UTF-8
+Content-Language: en-GB
+Transfer-Encoding: chunked
+Date: Sun, 20 Sep 2020 11:02:37 GMT
+
+9b0
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Spring Security OAuth 2.0 Sample</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="/webjars/bootstrap/3.4.1/css/bootstrap.css" />
+    </head>
+    <body>
+        <div>
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="container-fluid">
+                        <div class="navbar-collapse collapse" id="navbar">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Authorize the client using <span style="font-family:monospace">grant_type</span>:</h3>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="/authorize?grant_type=authorization_code"><span style="font-size:medium">Authorization Code</span>&nbsp;&nbsp;<small class="text-muted">(Login to Spring Authorization Server using: user1/password)</small></a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/authorize?grant_type=client_credentials"><span style="font-size:medium">Client Credentials</span></a>
+                    </li>
+                </ul>
+                <div class="panel-footer">
+                    <h4>Messages:</h4>
+                    <table class="table table-condensed">
+                        <tbody>
+                            <tr class="row">
+                                <td>Message 1</td>
+                            </tr>
+                            <tr class="row">
+                                <td>Message 2</td>
+                            </tr>
+                            <tr class="row">
+                                <td>Message 3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+        <script src="/webjars/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
+
+
+down:
+0
+
+2020.Sep.20 13:02:37: TCP Forwarding 0:0:0:0:0:0:0:1:54467 <--> 127.0.0.1:39101 stopped.

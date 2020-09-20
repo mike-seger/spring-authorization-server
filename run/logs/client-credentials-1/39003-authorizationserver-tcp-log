@@ -1,0 +1,60 @@
+2020.Sep.20 13:02:36: TCP Forwarding 127.0.0.1:54469 (unknown) <--> 127.0.0.1:39103 (unknown)
+
+up:
+POST /oauth2/token HTTP/1.1
+Accept: application/json;charset=UTF-8
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Authorization: Basic bWVzc2FnaW5nLWNsaWVudDpzZWNyZXQ=
+User-Agent: Java/11.0.3
+Host: auth-server:39003
+Connection: keep-alive
+Content-Length: 62
+
+grant_type=client_credentials&scope=message.read+message.write
+down:
+HTTP/1.1 200 
+Set-Cookie: JSESSIONID=6535642D494C8B64B14C46D3FD2AA906; Path=/; HttpOnly
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Sun, 20 Sep 2020 11:02:36 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+348
+{"access_token":"eyJraWQiOiJiNjJhNjA3NS1hN2VkLTQ0M2UtODUzOC01YjM1MThiZTc4MjMiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJtZXNzYWdpbmctY2xpZW50IiwiYXVkIjoibWVzc2FnaW5nLWNsaWVudCIsIm5iZiI6MTYwMDU5OTc1Niwic2NvcGUiOlsibWVzc2FnZS5yZWFkIiwibWVzc2FnZS53cml0ZSJdLCJpc3MiOiJodHRwczpcL1wvb2F1dGgyLnByb3ZpZGVyLmNvbSIsImV4cCI6MTYwMDYwMzM1NiwiaWF0IjoxNjAwNTk5NzU2LCJqdGkiOiI3MDdkZjM2OS00YzA4LTRhZDktOTlhZS1kOGU2NjIzZWRiZmEifQ.gzQ63VrAR_D3aZ4wYhkxWcZB59YXYcAgfHRIniSZvoWuKxHgQclpK6Z2A-yQtYZM2rnnHQOvwn3j7Op2qK11YuGQDaXBJoQ4z1B96JZmkVLRAWQJcm6tuvlMlTz3Ej-G2WCIf31x2VJYSJFNsSfwBePFnY4EE3MOBKhjWhh6Cr_M5goPOEmL8UlA7QyZFzGQGn7cTVfn6_jv6m8DWJYg4RYz9cnyyq4WS4MY2mC3hGF1kSorZjeHTGlsOk68FEyZp7D0i73Idsjcds-Bv962JUjsZFFS6tUa12QHZbSV0d54mAW2QDwhBkyIaoE_mqnno4GEExJK4K2Se6iKDSlBQw","scope":"message.read message.write","token_type":"Bearer","expires_in":"3599"}
+
+down:
+0
+
+2020.Sep.20 13:02:36: TCP Forwarding 127.0.0.1:54473 (unknown) <--> 127.0.0.1:39103 (unknown)
+
+up:
+GET /oauth2/jwks HTTP/1.1
+Accept: application/json, application/jwk-set+json
+User-Agent: Java/11.0.3
+Host: auth-server:39003
+Connection: keep-alive
+
+
+down:
+HTTP/1.1 200 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json;charset=ISO-8859-1
+Content-Length: 455
+Date: Sun, 20 Sep 2020 11:02:36 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{"keys":[{"kty":"RSA","e":"AQAB","use":"sig","kid":"b62a6075-a7ed-443e-8538-5b3518be7823","alg":"RS256","n":"uD9kG88aSsTZ8MrEyhwZJCi3GqHyYeQQcc28bwGdoouaAUUtrwVxBs6EFwVsq0UHg94dn0sv-nhlH4fKK0X36cKZS95MfVDJ3QIXCVIliNj2gMOf9zuksuJHLWNLSkTiSfZ6VnQvsM8-sIDOn3qHw7RdaeJgKKrA5AeUOEwMm09T9t0gr1_mitXj4pQMraWMlCu3i39__09CDS2iDmukt2UVOX42diDPK53TgA2I32GEpavz84aZGNZnYVlOOjAfDHgPgMzxkVtPoA2KWcY5LH-qr3xyFKwYoaEmgj_-2FlR_cf-zzswl5AB1fCG58J1rxWTCVackboz8z4Htwv9FQ"}]}2020.Sep.20 13:03:36: TCP Forwarding 127.0.0.1:54469 <--> 127.0.0.1:39103 stopped.
+2020.Sep.20 13:03:36: TCP Forwarding 127.0.0.1:54473 <--> 127.0.0.1:39103 stopped.
