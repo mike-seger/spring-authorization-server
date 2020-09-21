@@ -1,15 +1,15 @@
-2020.Sep.20 13:02:36: TCP Forwarding 127.0.0.1:54471 (unknown) <--> 127.0.0.1:39102 (unknown)
+2020-09-21T08:23:31.489000Z: TCP Forwarding 127.0.0.1:61474 (unknown) <--> 127.0.0.1:39102 (unknown)
 
-up:
+2020-09-21T08:23:31.514000Z: up:
 GET /messages HTTP/1.1
 accept-encoding: gzip
 user-agent: ReactorNetty/1.0.0-M2
 host: localhost:39002
 accept: */*
-Authorization: Bearer eyJraWQiOiJiNjJhNjA3NS1hN2VkLTQ0M2UtODUzOC01YjM1MThiZTc4MjMiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJtZXNzYWdpbmctY2xpZW50IiwiYXVkIjoibWVzc2FnaW5nLWNsaWVudCIsIm5iZiI6MTYwMDU5OTc1Niwic2NvcGUiOlsibWVzc2FnZS5yZWFkIiwibWVzc2FnZS53cml0ZSJdLCJpc3MiOiJodHRwczpcL1wvb2F1dGgyLnByb3ZpZGVyLmNvbSIsImV4cCI6MTYwMDYwMzM1NiwiaWF0IjoxNjAwNTk5NzU2LCJqdGkiOiI3MDdkZjM2OS00YzA4LTRhZDktOTlhZS1kOGU2NjIzZWRiZmEifQ.gzQ63VrAR_D3aZ4wYhkxWcZB59YXYcAgfHRIniSZvoWuKxHgQclpK6Z2A-yQtYZM2rnnHQOvwn3j7Op2qK11YuGQDaXBJoQ4z1B96JZmkVLRAWQJcm6tuvlMlTz3Ej-G2WCIf31x2VJYSJFNsSfwBePFnY4EE3MOBKhjWhh6Cr_M5goPOEmL8UlA7QyZFzGQGn7cTVfn6_jv6m8DWJYg4RYz9cnyyq4WS4MY2mC3hGF1kSorZjeHTGlsOk68FEyZp7D0i73Idsjcds-Bv962JUjsZFFS6tUa12QHZbSV0d54mAW2QDwhBkyIaoE_mqnno4GEExJK4K2Se6iKDSlBQw
+Authorization: Bearer eyJraWQiOiI0MTFjODE2OS01OWY5LTQwOGItYTI5Mi1kMzg1NDdkNWYzM2YiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJtZXNzYWdpbmctY2xpZW50IiwiYXVkIjoibWVzc2FnaW5nLWNsaWVudCIsIm5iZiI6MTYwMDY2OTQxMSwic2NvcGUiOlsibWVzc2FnZS5yZWFkIiwibWVzc2FnZS53cml0ZSJdLCJpc3MiOiJodHRwczpcL1wvb2F1dGgyLnByb3ZpZGVyLmNvbSIsImV4cCI6MTYwMDY3MzAxMSwiaWF0IjoxNjAwNjY5NDExLCJqdGkiOiIwMjE5MGM4My1iNDE5LTQ2NDYtYjQ2Ny0yNzA3N2QwZDQ0OTcifQ.kTEEzPJnSE6BdDNu1INDOtmYdkKeaDNcdDhAhyzmaxCSaHlDeZjqWvaa4ftnufaQfvIxYc6-BjXQcdDHHZJpGRu9eIW-bcr-cbqSnXhTP93LVO76m4Y4zLvRULTi5LR7UuLI9BwvjTmVEM7P3Pra-u9unKi0QfVZUBoozEUK90-cfhqeO4FPzzuyJB05wqjZtTi1BLzJ9deCnfn7WTx982sYHWbxL2r1Qomi9bolFud7TaKS4-v7M_MUieCV8xOpz7Kv7OW76z1QA39lVZEXYcThISbeG3E-t_e1qXQyj90EtDtUvULrp_nud6dvhubyzkTYdtgUMqxksx4nVCQU2Q
 
 
-down:
+2020-09-21T08:23:31.607000Z: down:
 HTTP/1.1 200 
 X-Content-Type-Options: nosniff
 X-XSS-Protection: 1; mode=block
@@ -19,12 +19,13 @@ Expires: 0
 X-Frame-Options: DENY
 Content-Type: application/json
 Transfer-Encoding: chunked
-Date: Sun, 20 Sep 2020 11:02:36 GMT
+Date: Mon, 21 Sep 2020 06:23:31 GMT
 
 25
 ["Message 1","Message 2","Message 3"]
+# END --------------------------
 
-down:
+2020-09-21T08:23:31.608000Z: down:
 0
 
-2020.Sep.20 13:03:37: TCP Forwarding 127.0.0.1:54471 <--> 127.0.0.1:39102 stopped.
+# END --------------------------

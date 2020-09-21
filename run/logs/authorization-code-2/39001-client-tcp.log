@@ -1,26 +1,40 @@
-$ curl -v -L -b /tmp/cookie -c /tmp/cookie  http://localhost:39001/authorize?grant_type=client_credentials
-*   Trying ::1...
-* TCP_NODELAY set
-* Connected to localhost (::1) port 39001 (#0)
-> GET /authorize?grant_type=client_credentials HTTP/1.1
-> Host: localhost:39001
-> User-Agent: curl/7.64.1
-> Accept: */*
-> 
-< HTTP/1.1 200 
-* Added cookie JSESSIONID="0C055A53D0ECCE6192E8B000CD5CB030" for domain localhost, path /, expire 0
-< Set-Cookie: JSESSIONID=0C055A53D0ECCE6192E8B000CD5CB030; Path=/; HttpOnly
-< X-Content-Type-Options: nosniff
-< X-XSS-Protection: 1; mode=block
-< Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-< Pragma: no-cache
-< Expires: 0
-< X-Frame-Options: DENY
-< Content-Type: text/html;charset=UTF-8
-< Content-Language: en-GB
-< Transfer-Encoding: chunked
-< Date: Sun, 20 Sep 2020 11:02:37 GMT
-< 
+2020-09-21T07:51:07.916000Z: TCP Forwarding 0:0:0:0:0:0:0:1:61033 <--> 127.0.0.1:39101 stopped.
+2020-09-21T07:52:11.759000Z: TCP Forwarding 0:0:0:0:0:0:0:1:61053 (unknown) <--> 127.0.0.1:39101 (unknown)
+
+2020-09-21T07:52:11.761000Z: up:
+GET /authorize?grant_type=authorization_code HTTP/1.1
+Host: localhost:39001
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+DNT: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:39001/authorize?grant_type=authorization_code
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,de;q=0.8
+Cookie: JSESSIONID=E81AFB6C6EFD77A9260319C25ED1B1A7
+
+
+2020-09-21T07:52:11.784000Z: down:
+HTTP/1.1 200 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: text/html;charset=UTF-8
+Content-Language: en-US
+Transfer-Encoding: chunked
+Date: Mon, 21 Sep 2020 05:52:11 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+9b0
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -76,5 +90,10 @@ $ curl -v -L -b /tmp/cookie -c /tmp/cookie  http://localhost:39001/authorize?gra
         <script src="/webjars/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </body>
 </html>
-* Connection #0 to host localhost left intact
-* Closing connection 0
+
+# END --------------------------
+
+2020-09-21T07:52:11.784000Z: down:
+0
+
+# END --------------------------

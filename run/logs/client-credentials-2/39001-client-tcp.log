@@ -1,15 +1,25 @@
-2020.Sep.20 13:20:49: TCP Forwarding 0:0:0:0:0:0:0:1:54628 (unknown) <--> 127.0.0.1:39101 (unknown)
+# END --------------------------
 
-up:
+2020-09-21T08:24:06.396000Z: up:
 GET /authorize?grant_type=client_credentials HTTP/1.1
 Host: localhost:39001
-User-Agent: curl/7.64.1
-Accept: */*
-Cookie: JSESSIONID=0C055A53D0ECCE6192E8B000CD5CB030
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+DNT: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:39001/authorize?grant_type=client_credentials
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,de;q=0.8
+Cookie: JSESSIONID=EA7EFBB771E81B37EC66CFEE540D85B9
 
 
-down:
-HTTP/1.1 200
+2020-09-21T08:24:06.412000Z: down:
+HTTP/1.1 200 
 X-Content-Type-Options: nosniff
 X-XSS-Protection: 1; mode=block
 Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -17,9 +27,11 @@ Pragma: no-cache
 Expires: 0
 X-Frame-Options: DENY
 Content-Type: text/html;charset=UTF-8
-Content-Language: en-GB
+Content-Language: en-US
 Transfer-Encoding: chunked
-Date: Sun, 20 Sep 2020 11:20:49 GMT
+Date: Mon, 21 Sep 2020 06:24:06 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
 
 9b0
 <!DOCTYPE html>
@@ -78,8 +90,9 @@ Date: Sun, 20 Sep 2020 11:20:49 GMT
     </body>
 </html>
 
+# END --------------------------
 
-down:
+2020-09-21T08:24:06.412000Z: down:
 0
 
-2020.Sep.20 13:20:49: TCP Forwarding 0:0:0:0:0:0:0:1:54628 <--> 127.0.0.1:39101 stopped.
+# END --------------------------

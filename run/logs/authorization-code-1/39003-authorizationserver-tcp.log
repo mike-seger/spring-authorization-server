@@ -1,0 +1,221 @@
+2020-09-21T07:49:55.069000Z: TCP Forwarding 127.0.0.1:61021 (unknown) <--> 127.0.0.1:39103 (unknown)
+
+2020-09-21T07:49:55.077000Z: up:
+GET /oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read%20message.write&state=8brREPoGuI0HgSiID0cLTGXZZm48xezFoiFMf3hF0zU%3D&redirect_uri=http://localhost:39001/authorized HTTP/1.1
+Host: auth-server:39003
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+DNT: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Referer: http://localhost:39001/authorize?grant_type=authorization_code
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9,de;q=0.8
+Cookie: JSESSIONID=2F1C085AA6F3EBA57EC6600E7F1FF223
+
+
+2020-09-21T07:49:55.132000Z: down:
+HTTP/1.1 302 
+Set-Cookie: JSESSIONID=E68F170D7B21CC9E8F64D2F194788106; Path=/; HttpOnly
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Location: http://auth-server:39003/login
+Content-Length: 0
+Date: Mon, 21 Sep 2020 05:49:55 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+# END --------------------------
+
+2020-09-21T07:49:55.135000Z: up:
+GET /login HTTP/1.1
+Host: auth-server:39003
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+DNT: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Referer: http://localhost:39001/authorize?grant_type=authorization_code
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9,de;q=0.8
+Cookie: JSESSIONID=E68F170D7B21CC9E8F64D2F194788106
+
+
+2020-09-21T07:49:55.138000Z: down:
+HTTP/1.1 200 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: text/html;charset=UTF-8
+Content-Length: 1406
+Date: Mon, 21 Sep 2020 05:49:55 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Please sign in</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"/>
+  </head>
+  <body>
+     <div class="container">
+      <form class="form-signin" method="post" action="/login">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <p>
+          <label for="username" class="sr-only">Username</label>
+          <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+        </p>
+        <p>
+          <label for="password" class="sr-only">Password</label>
+          <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+        </p>
+<input name="_csrf" type="hidden" value="b6828522-6a1e-49e6-bd7c-0f6886964c01" />
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+</div>
+</body></html># END --------------------------
+
+2020-09-21T07:50:07.029000Z: up:
+POST /login HTTP/1.1
+Host: auth-server:39003
+Connection: keep-alive
+Content-Length: 75
+Cache-Control: max-age=0
+Origin: http://auth-server:39003
+Upgrade-Insecure-Requests: 1
+DNT: 1
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Referer: http://auth-server:39003/login
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9,de;q=0.8
+Cookie: JSESSIONID=E68F170D7B21CC9E8F64D2F194788106
+
+username=user1&password=password&_csrf=b6828522-6a1e-49e6-bd7c-0f6886964c01
+2020-09-21T07:50:07.158000Z: down:
+HTTP/1.1 302 
+Set-Cookie: JSESSIONID=D9C0334664F8DBE38EA63BC8C7901F0F; Path=/; HttpOnly
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Location: http://auth-server:39003/oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read%20message.write&state=8brREPoGuI0HgSiID0cLTGXZZm48xezFoiFMf3hF0zU%3D&redirect_uri=http://localhost:39001/authorized
+Content-Length: 0
+Date: Mon, 21 Sep 2020 05:50:07 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+# END --------------------------
+
+2020-09-21T07:50:07.161000Z: up:
+GET /oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read%20message.write&state=8brREPoGuI0HgSiID0cLTGXZZm48xezFoiFMf3hF0zU%3D&redirect_uri=http://localhost:39001/authorized HTTP/1.1
+Host: auth-server:39003
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+DNT: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Referer: http://auth-server:39003/login
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9,de;q=0.8
+Cookie: JSESSIONID=D9C0334664F8DBE38EA63BC8C7901F0F
+
+
+2020-09-21T07:50:07.170000Z: down:
+HTTP/1.1 302 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Location: http://localhost:39001/authorized?code=SvsQSUEMLx_yFDscfN_wDefqInVfIP_d7OxcfC0cK7o%3D&state=8brREPoGuI0HgSiID0cLTGXZZm48xezFoiFMf3hF0zU%3D
+Content-Length: 0
+Date: Mon, 21 Sep 2020 05:50:07 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+# END --------------------------
+2020-09-21T07:50:07.193000Z: TCP Forwarding 127.0.0.1:61026 (unknown) <--> 127.0.0.1:39103 (unknown)
+
+2020-09-21T07:50:07.194000Z: up:
+POST /oauth2/token HTTP/1.1
+Accept: application/json;charset=UTF-8
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Authorization: Basic bWVzc2FnaW5nLWNsaWVudDpzZWNyZXQ=
+User-Agent: Java/11.0.3
+Host: auth-server:39003
+Connection: keep-alive
+Content-Length: 138
+
+
+2020-09-21T07:50:07.195000Z: up:
+grant_type=authorization_code&code=SvsQSUEMLx_yFDscfN_wDefqInVfIP_d7OxcfC0cK7o%3D&redirect_uri=http%3A%2F%2Flocalhost%3A39001%2Fauthorized
+2020-09-21T07:50:07.238000Z: down:
+HTTP/1.1 200 
+Set-Cookie: JSESSIONID=C25BDD1C70C4A479C74B1CEF3E5AD0EF; Path=/; HttpOnly
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Mon, 21 Sep 2020 05:50:07 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+339
+{"access_token":"eyJraWQiOiI4MGJkNzI3YS02MTY2LTQzYzYtODdiNy1mZjZjM2Q5NTZmNzMiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImF1ZCI6Im1lc3NhZ2luZy1jbGllbnQiLCJuYmYiOjE2MDA2Njc0MDcsInNjb3BlIjpbIm1lc3NhZ2UucmVhZCIsIm1lc3NhZ2Uud3JpdGUiXSwiaXNzIjoiaHR0cHM6XC9cL29hdXRoMi5wcm92aWRlci5jb20iLCJleHAiOjE2MDA2NzEwMDcsImlhdCI6MTYwMDY2NzQwNywianRpIjoiMzVlNGMyZjQtYmI4OS00YjczLWJlMjItMmRjNTQ0NjkxZmJkIn0.mp2RGxr0tYuekhMaZDVch1_q-Gluu4HoZZq35STR6EI8KxxP5gvATD29yC-cez3kec6tioRsn4uTb-y5eAwnHlrCZ1dsXc3YNdiutxypzT7RVxcWtrY5m5Iain5BxBpCUvrNdy0mwxxolvJsDCh24VRihKLKaP6czZPQTQZr789XcHBBbyYWrYRsobSjt2Xs9U6qLfkcn6y7CexTZXdiu4y5OW8OrRpS0AM-Rvcr3MEy0mHTBHcfMlarHwo0_TgsCrIww6R_Q94WhgEqRXUcGUZI9A37oIclFYsr0r2MKURdb6y9XvBRGAUfMcqPnXr6fntf_F3u6ftdz46T_MgFyA","scope":"message.read message.write","token_type":"Bearer","expires_in":"3599"}
+# END --------------------------
+
+2020-09-21T07:50:07.238000Z: down:
+0
+
+# END --------------------------
+2020-09-21T07:50:07.446000Z: TCP Forwarding 127.0.0.1:61030 (unknown) <--> 127.0.0.1:39103 (unknown)
+
+2020-09-21T07:50:07.448000Z: up:
+GET /oauth2/jwks HTTP/1.1
+Accept: application/json, application/jwk-set+json
+User-Agent: Java/11.0.3
+Host: auth-server:39003
+Connection: keep-alive
+
+
+2020-09-21T07:50:07.451000Z: down:
+HTTP/1.1 200 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json;charset=ISO-8859-1
+Content-Length: 455
+Date: Mon, 21 Sep 2020 05:50:07 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{"keys":[{"kty":"RSA","e":"AQAB","use":"sig","kid":"80bd727a-6166-43c6-87b7-ff6c3d956f73","alg":"RS256","n":"pQzaFQCYO82tg_26tyvD9Krn3JiQagjiXBFEa7A2LGaYkz4vMIRXU4xKj1VCKdK5LgDBF2ss18yEEHwEmgsnfJc302WZyW1trgp5VXOmKziO7YPCQeS4GvhnUy9v46Y2gUJSPxfSuJjl7G6H8KWiNLOo_AKojhglSRNp2YFLWx-oHJPDvPkZZveZf1na7gB4MF_cogtUH6qpjf6qQ9iIDMPJZLjqBluLBb5i45_8KG831_nLZfk8nyv6PQQCH79YsclhFOjQMN30sLN_TZVGRCffp3xOPPaFv15fvzT8l-jDHw06AkyAqh9-2i8N5NupBJYYqkoH66iiFm80YRIXGw"}]}# END --------------------------
+2020-09-21T07:51:07.295000Z: TCP Forwarding 127.0.0.1:61026 <--> 127.0.0.1:39103 stopped.
+2020-09-21T07:51:07.494000Z: TCP Forwarding 127.0.0.1:61030 <--> 127.0.0.1:39103 stopped.
+2020-09-21T07:51:08.498000Z: TCP Forwarding 127.0.0.1:61021 <--> 127.0.0.1:39103 stopped.
