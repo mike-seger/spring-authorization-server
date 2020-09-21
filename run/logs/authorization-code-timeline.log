@@ -1,0 +1,262 @@
+============================================================
+Request 1
+============================================================
+client
+2020-09-21T14:31:10.691975Z <----
+GET /authorize?grant_type=authorization_code HTTP/1.1
+Host: localhost:39001
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+Cookie: JSESSIONID=949318AE34005BBABFB5243FA5F7A13B
+# END --------------------------
+
+client
+2020-09-21T14:31:10.757004Z ---->
+HTTP/1.1 302
+Set-Cookie: JSESSIONID=F9980943AE394C903E8F422C8E50BEDF; Path=/; HttpOnly
+Location: http://auth-server:39003/oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read%20message.write&state=Jc0hgwXBHrSogrbY7COuwFB-R1OhU2J5mawZc8QudBk%3D&redirect_uri=http://localhost:39001/authorized
+Date: Mon, 21 Sep 2020 14:31:10 GMT
+# END --------------------------
+
+authorizationserver
+2020-09-21T14:31:10.798640Z <----
+GET /oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read%20message.write&state=Jc0hgwXBHrSogrbY7COuwFB-R1OhU2J5mawZc8QudBk%3D&redirect_uri=http://localhost:39001/authorized HTTP/1.1
+Host: auth-server:39003
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+Cookie: JSESSIONID=94C45379CF3663C3518166285AF320CF
+# END --------------------------
+
+authorizationserver
+2020-09-21T14:31:10.858865Z ---->
+HTTP/1.1 302
+Set-Cookie: JSESSIONID=08F65176E8492E26B2F06A9A5FF8A56B; Path=/; HttpOnly
+Location: http://auth-server:39003/login
+Date: Mon, 21 Sep 2020 14:31:10 GMT
+# END --------------------------
+
+authorizationserver
+2020-09-21T14:31:10.861686Z <----
+GET /login HTTP/1.1
+Host: auth-server:39003
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+Cookie: JSESSIONID=08F65176E8492E26B2F06A9A5FF8A56B
+# END --------------------------
+
+authorizationserver
+2020-09-21T14:31:10.864508Z ---->
+HTTP/1.1 200
+Content-Type: text/html;charset=UTF-8
+Content-Length: 1406
+Date: Mon, 21 Sep 2020 14:31:10 GMT
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Please sign in</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"/>
+  </head>
+  <body>
+     <div class="container">
+<input name="_csrf" type="hidden" value="f1d17200-c9bb-4b54-9ce4-09d3a7ec80ef" />
+</div>
+</body></html>
+# END --------------------------
+
+authorizationserver
+2020-09-21T14:31:18.367290Z <----
+POST /login HTTP/1.1
+Host: auth-server:39003
+Content-Length: 75
+Origin: http://auth-server:39003
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+Cookie: JSESSIONID=08F65176E8492E26B2F06A9A5FF8A56B
+username=user1&password=password&_csrf=f1d17200-c9bb-4b54-9ce4-09d3a7ec80ef
+# END --------------------------
+
+authorizationserver
+2020-09-21T14:31:18.496827Z ---->
+HTTP/1.1 302
+Set-Cookie: JSESSIONID=3538BDB983DE6AA90AEE21B08A2A6D63; Path=/; HttpOnly
+Location: http://auth-server:39003/oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read%20message.write&state=Jc0hgwXBHrSogrbY7COuwFB-R1OhU2J5mawZc8QudBk%3D&redirect_uri=http://localhost:39001/authorized
+Date: Mon, 21 Sep 2020 14:31:18 GMT
+# END --------------------------
+
+authorizationserver
+2020-09-21T14:31:18.499787Z <----
+GET /oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read%20message.write&state=Jc0hgwXBHrSogrbY7COuwFB-R1OhU2J5mawZc8QudBk%3D&redirect_uri=http://localhost:39001/authorized HTTP/1.1
+Host: auth-server:39003
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+Cookie: JSESSIONID=3538BDB983DE6AA90AEE21B08A2A6D63
+# END --------------------------
+
+authorizationserver
+2020-09-21T14:31:18.509111Z ---->
+HTTP/1.1 302
+Location: http://localhost:39001/authorized?code=u7ZtGDF_DqtFi9_Q0utb3_EWhF2eUhZnCwSmd6Hvazg%3D&state=Jc0hgwXBHrSogrbY7COuwFB-R1OhU2J5mawZc8QudBk%3D
+Date: Mon, 21 Sep 2020 14:31:18 GMT
+# END --------------------------
+
+client
+2020-09-21T14:31:18.512210Z <----
+GET /authorized?code=u7ZtGDF_DqtFi9_Q0utb3_EWhF2eUhZnCwSmd6Hvazg%3D&state=Jc0hgwXBHrSogrbY7COuwFB-R1OhU2J5mawZc8QudBk%3D HTTP/1.1
+Host: localhost:39001
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+Cookie: JSESSIONID=F9980943AE394C903E8F422C8E50BEDF
+# END --------------------------
+
+authorizationserver
+2020-09-21T14:31:18.529159Z <----
+POST /oauth2/token HTTP/1.1
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Authorization: Basic bWVzc2FnaW5nLWNsaWVudDpzZWNyZXQ=
+User-Agent: Java/11.0.3
+Host: auth-server:39003
+Content-Length: 138
+# END --------------------------
+
+authorizationserver
+2020-09-21T14:31:18.529428Z <----
+grant_type=authorization_code&code=u7ZtGDF_DqtFi9_Q0utb3_EWhF2eUhZnCwSmd6Hvazg%3D&redirect_uri=http%3A%2F%2Flocalhost%3A39001%2Fauthorized
+# END --------------------------
+
+authorizationserver
+2020-09-21T14:31:18.574713Z ---->
+HTTP/1.1 200
+Set-Cookie: JSESSIONID=1F043A0CD851976A065D51D1C1E2A2D0; Path=/; HttpOnly
+Content-Type: application/json;charset=UTF-8
+Date: Mon, 21 Sep 2020 14:31:18 GMT
+339
+{"access_token":"eyJraWQiOiJiNmVhMDM3My0wZWZlLTQyZmQtYTIyYi0yZmY0OThiYmJiYjIiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImF1ZCI6Im1lc3NhZ2luZy1jbGllbnQiLCJuYmYiOjE2MDA2OTg2NzgsInNjb3BlIjpbIm1lc3NhZ2UucmVhZCIsIm1lc3NhZ2Uud3JpdGUiXSwiaXNzIjoiaHR0cHM6XC9cL29hdXRoMi5wcm92aWRlci5jb20iLCJleHAiOjE2MDA3MDIyNzgsImlhdCI6MTYwMDY5ODY3OCwianRpIjoiNDE0M2E1YjctMzQ5OC00ZTQwLWEwNmQtNGRkZDM2MDk0YmE3In0.V0chAXFaUxTOLQ_pKr8fEONOG0LPzKOOamNWgRtG0Io2YGVI0NaTQKMe9xsHuaX7YOVhy5Tcto29Vc7WN0imXshRoYtcQfYdn4ZXETHjDzx4DqjxYdkC7NCYvYOUlrnEBXN64mIpkcD-diiueUNOaBS_NpVL5aQA3S9xQotWqx0g41QBjvjXvmQDyF5bs_YYyWA7AeubupVzf4nt5zd8SnBk1hOuGe7vcpGkfgJ-t16-7XcP5mIxoz_WHnHJmZiTK7pqjySbW5LRikphSj5dGMtgkSCVk2nzuGxiOQKat5FH3_Hsune5Q2lxHLvKu0ZsJycaXF-rSvd_QKtB-CmOsQ","scope":"message.read message.write","token_type":"Bearer","expires_in":"3599"}
+# END --------------------------
+
+authorizationserver
+2020-09-21T14:31:18.574880Z ---->
+# END --------------------------
+
+client
+2020-09-21T14:31:18.593430Z ---->
+HTTP/1.1 302
+Location: http://localhost:39001/authorize?grant_type=authorization_code
+Date: Mon, 21 Sep 2020 14:31:18 GMT
+# END --------------------------
+
+client
+2020-09-21T14:31:18.596097Z <----
+GET /authorize?grant_type=authorization_code HTTP/1.1
+Host: localhost:39001
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+Cookie: JSESSIONID=F9980943AE394C903E8F422C8E50BEDF
+# END --------------------------
+
+resourceserver
+2020-09-21T14:31:18.731392Z <----
+GET /messages HTTP/1.1
+user-agent: ReactorNetty/1.0.0-M2
+host: localhost:39002
+Authorization: Bearer eyJraWQiOiJiNmVhMDM3My0wZWZlLTQyZmQtYTIyYi0yZmY0OThiYmJiYjIiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImF1ZCI6Im1lc3NhZ2luZy1jbGllbnQiLCJuYmYiOjE2MDA2OTg2NzgsInNjb3BlIjpbIm1lc3NhZ2UucmVhZCIsIm1lc3NhZ2Uud3JpdGUiXSwiaXNzIjoiaHR0cHM6XC9cL29hdXRoMi5wcm92aWRlci5jb20iLCJleHAiOjE2MDA3MDIyNzgsImlhdCI6MTYwMDY5ODY3OCwianRpIjoiNDE0M2E1YjctMzQ5OC00ZTQwLWEwNmQtNGRkZDM2MDk0YmE3In0.V0chAXFaUxTOLQ_pKr8fEONOG0LPzKOOamNWgRtG0Io2YGVI0NaTQKMe9xsHuaX7YOVhy5Tcto29Vc7WN0imXshRoYtcQfYdn4ZXETHjDzx4DqjxYdkC7NCYvYOUlrnEBXN64mIpkcD-diiueUNOaBS_NpVL5aQA3S9xQotWqx0g41QBjvjXvmQDyF5bs_YYyWA7AeubupVzf4nt5zd8SnBk1hOuGe7vcpGkfgJ-t16-7XcP5mIxoz_WHnHJmZiTK7pqjySbW5LRikphSj5dGMtgkSCVk2nzuGxiOQKat5FH3_Hsune5Q2lxHLvKu0ZsJycaXF-rSvd_QKtB-CmOsQ
+# END --------------------------
+
+authorizationserver
+2020-09-21T14:31:18.787316Z <----
+GET /oauth2/jwks HTTP/1.1
+User-Agent: Java/11.0.3
+Host: auth-server:39003
+# END --------------------------
+
+authorizationserver
+2020-09-21T14:31:18.791289Z ---->
+HTTP/1.1 200
+Content-Type: application/json;charset=ISO-8859-1
+Content-Length: 455
+Date: Mon, 21 Sep 2020 14:31:18 GMT
+{"keys":[{"kty":"RSA","e":"AQAB","use":"sig","kid":"b6ea0373-0efe-42fd-a22b-2ff498bbbbb2","alg":"RS256","n":"j2dhuzCErFlwa6XQFGULKro6rssU3Pj9UwELA1LF1WTQ-abSm5dE-ec1Farcqltc4UpKQy4DsiPZVapG6Ivr8n96gIGWKMt24OoLof1cd7z42tA6nplpiPL_lCXdRbbYpFMuN9z1m5QQ4p16LcE0_vhCnJqO6mMVYAlXzy2YlMGpPihsUk5DXzcF2p6pTLBDHmpkt0Sis1gLkTlqeQMesuiav32FN8Ec8fRacGaT27vV44PgabCn3lKyhtB_XN-bNZaLOirmAGFKiK8QgC_WU3qR5snzk9cSO-4Zev_XEx_0EIfr5NgP1tHUdGRevka4MiCGalrK1E39k2Zs84doBw"}]}
+# END --------------------------
+
+resourceserver
+2020-09-21T14:31:18.832579Z ---->
+HTTP/1.1 200
+Content-Type: application/json
+Date: Mon, 21 Sep 2020 14:31:18 GMT
+25
+["Message 1","Message 2","Message 3"]
+# END --------------------------
+
+resourceserver
+2020-09-21T14:31:18.833646Z ---->
+# END --------------------------
+
+client
+2020-09-21T14:31:19.026819Z ---->
+HTTP/1.1 200
+Content-Type: text/html;charset=UTF-8
+Content-Language: en-US
+Date: Mon, 21 Sep 2020 14:31:18 GMT
+9b0
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    </head>
+    <body>
+    </body>
+</html>
+# END --------------------------
+
+client
+2020-09-21T14:31:19.027042Z ---->
+# END --------------------------
+
+============================================================
+Request 2
+============================================================
+client
+2020-09-21T14:31:30.464245Z <----
+GET /authorize?grant_type=authorization_code HTTP/1.1
+Host: localhost:39001
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+Cookie: JSESSIONID=F9980943AE394C903E8F422C8E50BEDF
+# END --------------------------
+
+resourceserver
+2020-09-21T14:31:30.467733Z <----
+GET /messages HTTP/1.1
+user-agent: ReactorNetty/1.0.0-M2
+host: localhost:39002
+Authorization: Bearer eyJraWQiOiJiNmVhMDM3My0wZWZlLTQyZmQtYTIyYi0yZmY0OThiYmJiYjIiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImF1ZCI6Im1lc3NhZ2luZy1jbGllbnQiLCJuYmYiOjE2MDA2OTg2NzgsInNjb3BlIjpbIm1lc3NhZ2UucmVhZCIsIm1lc3NhZ2Uud3JpdGUiXSwiaXNzIjoiaHR0cHM6XC9cL29hdXRoMi5wcm92aWRlci5jb20iLCJleHAiOjE2MDA3MDIyNzgsImlhdCI6MTYwMDY5ODY3OCwianRpIjoiNDE0M2E1YjctMzQ5OC00ZTQwLWEwNmQtNGRkZDM2MDk0YmE3In0.V0chAXFaUxTOLQ_pKr8fEONOG0LPzKOOamNWgRtG0Io2YGVI0NaTQKMe9xsHuaX7YOVhy5Tcto29Vc7WN0imXshRoYtcQfYdn4ZXETHjDzx4DqjxYdkC7NCYvYOUlrnEBXN64mIpkcD-diiueUNOaBS_NpVL5aQA3S9xQotWqx0g41QBjvjXvmQDyF5bs_YYyWA7AeubupVzf4nt5zd8SnBk1hOuGe7vcpGkfgJ-t16-7XcP5mIxoz_WHnHJmZiTK7pqjySbW5LRikphSj5dGMtgkSCVk2nzuGxiOQKat5FH3_Hsune5Q2lxHLvKu0ZsJycaXF-rSvd_QKtB-CmOsQ
+# END --------------------------
+
+resourceserver
+2020-09-21T14:31:30.471695Z ---->
+HTTP/1.1 200
+Content-Type: application/json
+Date: Mon, 21 Sep 2020 14:31:30 GMT
+25
+["Message 1","Message 2","Message 3"]
+# END --------------------------
+
+resourceserver
+2020-09-21T14:31:30.471872Z ---->
+# END --------------------------
+
+client
+2020-09-21T14:31:30.477978Z ---->
+HTTP/1.1 200
+Content-Type: text/html;charset=UTF-8
+Content-Language: en-US
+Date: Mon, 21 Sep 2020 14:31:30 GMT
+9b0
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    </head>
+    <body>
+    </body>
+</html>
+# END --------------------------
+
+client
+2020-09-21T14:31:30.478195Z ---->
+# END --------------------------

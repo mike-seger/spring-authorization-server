@@ -1,6 +1,4 @@
-# END --------------------------
-
-2020-09-21T08:24:06.396000Z: up:
+2020-09-21T14:51:45.782770Z: up:
 GET /authorize?grant_type=client_credentials HTTP/1.1
 Host: localhost:39001
 Connection: keep-alive
@@ -15,11 +13,13 @@ Sec-Fetch-Dest: document
 Referer: http://localhost:39001/authorize?grant_type=client_credentials
 Accept-Encoding: gzip, deflate, br
 Accept-Language: en-US,en;q=0.9,de;q=0.8
-Cookie: JSESSIONID=EA7EFBB771E81B37EC66CFEE540D85B9
+Cookie: JSESSIONID=947F74EC7542408B1DE79B0E76D1267E
 
 
-2020-09-21T08:24:06.412000Z: down:
-HTTP/1.1 200 
+# END --------------------------
+
+2020-09-21T14:51:45.797070Z: down:
+HTTP/1.1 200
 X-Content-Type-Options: nosniff
 X-XSS-Protection: 1; mode=block
 Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -29,7 +29,7 @@ X-Frame-Options: DENY
 Content-Type: text/html;charset=UTF-8
 Content-Language: en-US
 Transfer-Encoding: chunked
-Date: Mon, 21 Sep 2020 06:24:06 GMT
+Date: Mon, 21 Sep 2020 14:51:45 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 
@@ -90,9 +90,11 @@ Connection: keep-alive
     </body>
 </html>
 
+
 # END --------------------------
 
-2020-09-21T08:24:06.412000Z: down:
+2020-09-21T14:51:45.797274Z: down:
 0
+
 
 # END --------------------------

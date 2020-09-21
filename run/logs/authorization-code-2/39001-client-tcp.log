@@ -1,7 +1,6 @@
-2020-09-21T07:51:07.916000Z: TCP Forwarding 0:0:0:0:0:0:0:1:61033 <--> 127.0.0.1:39101 stopped.
-2020-09-21T07:52:11.759000Z: TCP Forwarding 0:0:0:0:0:0:0:1:61053 (unknown) <--> 127.0.0.1:39101 (unknown)
+# END --------------------------
 
-2020-09-21T07:52:11.761000Z: up:
+2020-09-21T14:31:30.464245Z: up:
 GET /authorize?grant_type=authorization_code HTTP/1.1
 Host: localhost:39001
 Connection: keep-alive
@@ -16,10 +15,12 @@ Sec-Fetch-Dest: document
 Referer: http://localhost:39001/authorize?grant_type=authorization_code
 Accept-Encoding: gzip, deflate, br
 Accept-Language: en-US,en;q=0.9,de;q=0.8
-Cookie: JSESSIONID=E81AFB6C6EFD77A9260319C25ED1B1A7
+Cookie: JSESSIONID=F9980943AE394C903E8F422C8E50BEDF
 
 
-2020-09-21T07:52:11.784000Z: down:
+# END --------------------------
+
+2020-09-21T14:31:30.477978Z: down:
 HTTP/1.1 200 
 X-Content-Type-Options: nosniff
 X-XSS-Protection: 1; mode=block
@@ -30,7 +31,7 @@ X-Frame-Options: DENY
 Content-Type: text/html;charset=UTF-8
 Content-Language: en-US
 Transfer-Encoding: chunked
-Date: Mon, 21 Sep 2020 05:52:11 GMT
+Date: Mon, 21 Sep 2020 14:31:30 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 
@@ -91,9 +92,11 @@ Connection: keep-alive
     </body>
 </html>
 
+
 # END --------------------------
 
-2020-09-21T07:52:11.784000Z: down:
+2020-09-21T14:31:30.478195Z: down:
 0
+
 
 # END --------------------------

@@ -1,6 +1,6 @@
-2020-09-21T07:49:54.999000Z: TCP Forwarding 0:0:0:0:0:0:0:1:61019 (unknown) <--> 127.0.0.1:39101 (unknown)
+2020-09-21T16:31:10.683000Z: TCP Forwarding 0:0:0:0:0:0:0:1:49316 (unknown) <--> 127.0.0.1:39101 (unknown)
 
-2020-09-21T07:49:55.007000Z: up:
+2020-09-21T14:31:10.691975Z: up:
 GET /authorize?grant_type=authorization_code HTTP/1.1
 Host: localhost:39001
 Connection: keep-alive
@@ -15,28 +15,31 @@ Sec-Fetch-Dest: document
 Referer: http://localhost:39001/authorize?grant_type=authorization_code
 Accept-Encoding: gzip, deflate, br
 Accept-Language: en-US,en;q=0.9,de;q=0.8
-Cookie: JSESSIONID=4025002B7C30F5E911D57F0C59C6B8F5
+Cookie: JSESSIONID=949318AE34005BBABFB5243FA5F7A13B
 
 
-2020-09-21T07:49:55.064000Z: down:
+# END --------------------------
+
+2020-09-21T14:31:10.757004Z: down:
 HTTP/1.1 302 
-Set-Cookie: JSESSIONID=E81AFB6C6EFD77A9260319C25ED1B1A7; Path=/; HttpOnly
+Set-Cookie: JSESSIONID=F9980943AE394C903E8F422C8E50BEDF; Path=/; HttpOnly
 X-Content-Type-Options: nosniff
 X-XSS-Protection: 1; mode=block
 Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 Pragma: no-cache
 Expires: 0
 X-Frame-Options: DENY
-Location: http://auth-server:39003/oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read%20message.write&state=8brREPoGuI0HgSiID0cLTGXZZm48xezFoiFMf3hF0zU%3D&redirect_uri=http://localhost:39001/authorized
+Location: http://auth-server:39003/oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read%20message.write&state=Jc0hgwXBHrSogrbY7COuwFB-R1OhU2J5mawZc8QudBk%3D&redirect_uri=http://localhost:39001/authorized
 Content-Length: 0
-Date: Mon, 21 Sep 2020 05:49:55 GMT
+Date: Mon, 21 Sep 2020 14:31:10 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 
+
 # END --------------------------
 
-2020-09-21T07:50:07.173000Z: up:
-GET /authorized?code=SvsQSUEMLx_yFDscfN_wDefqInVfIP_d7OxcfC0cK7o%3D&state=8brREPoGuI0HgSiID0cLTGXZZm48xezFoiFMf3hF0zU%3D HTTP/1.1
+2020-09-21T14:31:18.512210Z: up:
+GET /authorized?code=u7ZtGDF_DqtFi9_Q0utb3_EWhF2eUhZnCwSmd6Hvazg%3D&state=Jc0hgwXBHrSogrbY7COuwFB-R1OhU2J5mawZc8QudBk%3D HTTP/1.1
 Host: localhost:39001
 Connection: keep-alive
 Cache-Control: max-age=0
@@ -51,10 +54,12 @@ Sec-Fetch-Dest: document
 Referer: http://auth-server:39003/login
 Accept-Encoding: gzip, deflate, br
 Accept-Language: en-US,en;q=0.9,de;q=0.8
-Cookie: JSESSIONID=E81AFB6C6EFD77A9260319C25ED1B1A7
+Cookie: JSESSIONID=F9980943AE394C903E8F422C8E50BEDF
 
 
-2020-09-21T07:50:07.257000Z: down:
+# END --------------------------
+
+2020-09-21T14:31:18.593430Z: down:
 HTTP/1.1 302 
 X-Content-Type-Options: nosniff
 X-XSS-Protection: 1; mode=block
@@ -64,13 +69,14 @@ Expires: 0
 X-Frame-Options: DENY
 Location: http://localhost:39001/authorize?grant_type=authorization_code
 Content-Length: 0
-Date: Mon, 21 Sep 2020 05:50:07 GMT
+Date: Mon, 21 Sep 2020 14:31:18 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 
+
 # END --------------------------
 
-2020-09-21T07:50:07.260000Z: up:
+2020-09-21T14:31:18.596097Z: up:
 GET /authorize?grant_type=authorization_code HTTP/1.1
 Host: localhost:39001
 Connection: keep-alive
@@ -86,10 +92,12 @@ Sec-Fetch-Dest: document
 Referer: http://auth-server:39003/login
 Accept-Encoding: gzip, deflate, br
 Accept-Language: en-US,en;q=0.9,de;q=0.8
-Cookie: JSESSIONID=E81AFB6C6EFD77A9260319C25ED1B1A7
+Cookie: JSESSIONID=F9980943AE394C903E8F422C8E50BEDF
 
 
-2020-09-21T07:50:07.680000Z: down:
+# END --------------------------
+
+2020-09-21T14:31:19.026819Z: down:
 HTTP/1.1 200 
 X-Content-Type-Options: nosniff
 X-XSS-Protection: 1; mode=block
@@ -100,7 +108,7 @@ X-Frame-Options: DENY
 Content-Type: text/html;charset=UTF-8
 Content-Language: en-US
 Transfer-Encoding: chunked
-Date: Mon, 21 Sep 2020 05:50:07 GMT
+Date: Mon, 21 Sep 2020 14:31:18 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 
@@ -161,101 +169,11 @@ Connection: keep-alive
     </body>
 </html>
 
+
 # END --------------------------
 
-2020-09-21T07:50:07.681000Z: down:
+2020-09-21T14:31:19.027042Z: down:
 0
 
-# END --------------------------
-
-2020-09-21T07:50:07.726000Z: up:
-GET /webjars/bootstrap/3.4.1/css/bootstrap.css HTTP/1.1
-Host: localhost:39001
-Connection: keep-alive
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
-DNT: 1
-Accept: text/css,*/*;q=0.1
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: style
-Referer: http://localhost:39001/authorize?grant_type=authorization_code
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-US,en;q=0.9,de;q=0.8
-Cookie: JSESSIONID=E81AFB6C6EFD77A9260319C25ED1B1A7
-If-Modified-Since: Sat, 19 Sep 2020 19:05:27 GMT
-
-2020-09-21T07:50:07.728000Z: TCP Forwarding 0:0:0:0:0:0:0:1:61033 (unknown) <--> 127.0.0.1:39101 (unknown)
-2020-09-21T07:50:07.728000Z: TCP Forwarding 0:0:0:0:0:0:0:1:61032 (unknown) <--> 127.0.0.1:39101 (unknown)
-
-2020-09-21T07:50:07.729000Z: up:
-GET /webjars/bootstrap/3.4.1/js/bootstrap.min.js HTTP/1.1
-Host: localhost:39001
-Connection: keep-alive
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
-DNT: 1
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: script
-Referer: http://localhost:39001/authorize?grant_type=authorization_code
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-US,en;q=0.9,de;q=0.8
-Cookie: JSESSIONID=E81AFB6C6EFD77A9260319C25ED1B1A7
-If-Modified-Since: Sat, 19 Sep 2020 19:05:27 GMT
-
-
-2020-09-21T07:50:07.730000Z: up:
-GET /webjars/jquery/3.4.1/jquery.min.js HTTP/1.1
-Host: localhost:39001
-Connection: keep-alive
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
-DNT: 1
-Accept: */*
-Sec-Fetch-Site: same-origin
-Sec-Fetch-Mode: no-cors
-Sec-Fetch-Dest: script
-Referer: http://localhost:39001/authorize?grant_type=authorization_code
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-US,en;q=0.9,de;q=0.8
-Cookie: JSESSIONID=E81AFB6C6EFD77A9260319C25ED1B1A7
-If-Modified-Since: Sat, 19 Sep 2020 19:05:26 GMT
-
-
-2020-09-21T07:50:07.735000Z: down:
-HTTP/1.1 304 
-Vary: Origin
-Vary: Access-Control-Request-Method
-Vary: Access-Control-Request-Headers
-Last-Modified: Sat, 19 Sep 2020 19:05:27 GMT
-Date: Mon, 21 Sep 2020 05:50:07 GMT
-Keep-Alive: timeout=60
-Connection: keep-alive
-
-
-2020-09-21T07:50:07.735000Z: down:
-HTTP/1.1 304 
-Vary: Origin
-Vary: Access-Control-Request-Method
-Vary: Access-Control-Request-Headers
-Last-Modified: Sat, 19 Sep 2020 19:05:26 GMT
-Date: Mon, 21 Sep 2020 05:50:07 GMT
-Keep-Alive: timeout=60
-Connection: keep-alive
 
 # END --------------------------
-
-2020-09-21T07:50:07.735000Z: down:
-HTTP/1.1 304 
-Vary: Origin
-Vary: Access-Control-Request-Method
-Vary: Access-Control-Request-Headers
-Last-Modified: Sat, 19 Sep 2020 19:05:27 GMT
-Date: Mon, 21 Sep 2020 05:50:07 GMT
-Keep-Alive: timeout=60
-Connection: keep-alive
-
-# END --------------------------
-# END --------------------------
-2020-09-21T07:51:07.915000Z: TCP Forwarding 0:0:0:0:0:0:0:1:61019 <--> 127.0.0.1:39101 stopped.
-2020-09-21T07:51:07.916000Z: TCP Forwarding 0:0:0:0:0:0:0:1:61032 <--> 127.0.0.1:39101 stopped.
-2020-09-21T07:51:07.916000Z: TCP Forwarding 0:0:0:0:0:0:0:1:61033 <--> 127.0.0.1:39101 stopped.

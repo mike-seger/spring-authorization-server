@@ -1,7 +1,7 @@
-2020-09-21T07:49:55.069000Z: TCP Forwarding 127.0.0.1:61021 (unknown) <--> 127.0.0.1:39103 (unknown)
+2020-09-21T16:31:10.790000Z: TCP Forwarding 127.0.0.1:49318 (unknown) <--> 127.0.0.1:39103 (unknown)
 
-2020-09-21T07:49:55.077000Z: up:
-GET /oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read%20message.write&state=8brREPoGuI0HgSiID0cLTGXZZm48xezFoiFMf3hF0zU%3D&redirect_uri=http://localhost:39001/authorized HTTP/1.1
+2020-09-21T14:31:10.798640Z: up:
+GET /oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read%20message.write&state=Jc0hgwXBHrSogrbY7COuwFB-R1OhU2J5mawZc8QudBk%3D&redirect_uri=http://localhost:39001/authorized HTTP/1.1
 Host: auth-server:39003
 Connection: keep-alive
 Upgrade-Insecure-Requests: 1
@@ -11,12 +11,14 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Referer: http://localhost:39001/authorize?grant_type=authorization_code
 Accept-Encoding: gzip, deflate
 Accept-Language: en-US,en;q=0.9,de;q=0.8
-Cookie: JSESSIONID=2F1C085AA6F3EBA57EC6600E7F1FF223
+Cookie: JSESSIONID=94C45379CF3663C3518166285AF320CF
 
 
-2020-09-21T07:49:55.132000Z: down:
+# END --------------------------
+
+2020-09-21T14:31:10.858865Z: down:
 HTTP/1.1 302 
-Set-Cookie: JSESSIONID=E68F170D7B21CC9E8F64D2F194788106; Path=/; HttpOnly
+Set-Cookie: JSESSIONID=08F65176E8492E26B2F06A9A5FF8A56B; Path=/; HttpOnly
 X-Content-Type-Options: nosniff
 X-XSS-Protection: 1; mode=block
 Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -25,13 +27,14 @@ Expires: 0
 X-Frame-Options: DENY
 Location: http://auth-server:39003/login
 Content-Length: 0
-Date: Mon, 21 Sep 2020 05:49:55 GMT
+Date: Mon, 21 Sep 2020 14:31:10 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 
+
 # END --------------------------
 
-2020-09-21T07:49:55.135000Z: up:
+2020-09-21T14:31:10.861686Z: up:
 GET /login HTTP/1.1
 Host: auth-server:39003
 Connection: keep-alive
@@ -42,10 +45,12 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Referer: http://localhost:39001/authorize?grant_type=authorization_code
 Accept-Encoding: gzip, deflate
 Accept-Language: en-US,en;q=0.9,de;q=0.8
-Cookie: JSESSIONID=E68F170D7B21CC9E8F64D2F194788106
+Cookie: JSESSIONID=08F65176E8492E26B2F06A9A5FF8A56B
 
 
-2020-09-21T07:49:55.138000Z: down:
+# END --------------------------
+
+2020-09-21T14:31:10.864508Z: down:
 HTTP/1.1 200 
 X-Content-Type-Options: nosniff
 X-XSS-Protection: 1; mode=block
@@ -55,7 +60,7 @@ Expires: 0
 X-Frame-Options: DENY
 Content-Type: text/html;charset=UTF-8
 Content-Length: 1406
-Date: Mon, 21 Sep 2020 05:49:55 GMT
+Date: Mon, 21 Sep 2020 14:31:10 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 
@@ -82,13 +87,14 @@ Connection: keep-alive
           <label for="password" class="sr-only">Password</label>
           <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
         </p>
-<input name="_csrf" type="hidden" value="b6828522-6a1e-49e6-bd7c-0f6886964c01" />
+<input name="_csrf" type="hidden" value="f1d17200-c9bb-4b54-9ce4-09d3a7ec80ef" />
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
 </div>
-</body></html># END --------------------------
+</body></html>
+# END --------------------------
 
-2020-09-21T07:50:07.029000Z: up:
+2020-09-21T14:31:18.367290Z: up:
 POST /login HTTP/1.1
 Host: auth-server:39003
 Connection: keep-alive
@@ -103,28 +109,31 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Referer: http://auth-server:39003/login
 Accept-Encoding: gzip, deflate
 Accept-Language: en-US,en;q=0.9,de;q=0.8
-Cookie: JSESSIONID=E68F170D7B21CC9E8F64D2F194788106
+Cookie: JSESSIONID=08F65176E8492E26B2F06A9A5FF8A56B
 
-username=user1&password=password&_csrf=b6828522-6a1e-49e6-bd7c-0f6886964c01
-2020-09-21T07:50:07.158000Z: down:
+username=user1&password=password&_csrf=f1d17200-c9bb-4b54-9ce4-09d3a7ec80ef
+# END --------------------------
+
+2020-09-21T14:31:18.496827Z: down:
 HTTP/1.1 302 
-Set-Cookie: JSESSIONID=D9C0334664F8DBE38EA63BC8C7901F0F; Path=/; HttpOnly
+Set-Cookie: JSESSIONID=3538BDB983DE6AA90AEE21B08A2A6D63; Path=/; HttpOnly
 X-Content-Type-Options: nosniff
 X-XSS-Protection: 1; mode=block
 Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 Pragma: no-cache
 Expires: 0
 X-Frame-Options: DENY
-Location: http://auth-server:39003/oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read%20message.write&state=8brREPoGuI0HgSiID0cLTGXZZm48xezFoiFMf3hF0zU%3D&redirect_uri=http://localhost:39001/authorized
+Location: http://auth-server:39003/oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read%20message.write&state=Jc0hgwXBHrSogrbY7COuwFB-R1OhU2J5mawZc8QudBk%3D&redirect_uri=http://localhost:39001/authorized
 Content-Length: 0
-Date: Mon, 21 Sep 2020 05:50:07 GMT
+Date: Mon, 21 Sep 2020 14:31:18 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 
+
 # END --------------------------
 
-2020-09-21T07:50:07.161000Z: up:
-GET /oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read%20message.write&state=8brREPoGuI0HgSiID0cLTGXZZm48xezFoiFMf3hF0zU%3D&redirect_uri=http://localhost:39001/authorized HTTP/1.1
+2020-09-21T14:31:18.499787Z: up:
+GET /oauth2/authorize?response_type=code&client_id=messaging-client&scope=message.read%20message.write&state=Jc0hgwXBHrSogrbY7COuwFB-R1OhU2J5mawZc8QudBk%3D&redirect_uri=http://localhost:39001/authorized HTTP/1.1
 Host: auth-server:39003
 Connection: keep-alive
 Cache-Control: max-age=0
@@ -135,10 +144,12 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Referer: http://auth-server:39003/login
 Accept-Encoding: gzip, deflate
 Accept-Language: en-US,en;q=0.9,de;q=0.8
-Cookie: JSESSIONID=D9C0334664F8DBE38EA63BC8C7901F0F
+Cookie: JSESSIONID=3538BDB983DE6AA90AEE21B08A2A6D63
 
 
-2020-09-21T07:50:07.170000Z: down:
+# END --------------------------
+
+2020-09-21T14:31:18.509111Z: down:
 HTTP/1.1 302 
 X-Content-Type-Options: nosniff
 X-XSS-Protection: 1; mode=block
@@ -146,16 +157,17 @@ Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 Pragma: no-cache
 Expires: 0
 X-Frame-Options: DENY
-Location: http://localhost:39001/authorized?code=SvsQSUEMLx_yFDscfN_wDefqInVfIP_d7OxcfC0cK7o%3D&state=8brREPoGuI0HgSiID0cLTGXZZm48xezFoiFMf3hF0zU%3D
+Location: http://localhost:39001/authorized?code=u7ZtGDF_DqtFi9_Q0utb3_EWhF2eUhZnCwSmd6Hvazg%3D&state=Jc0hgwXBHrSogrbY7COuwFB-R1OhU2J5mawZc8QudBk%3D
 Content-Length: 0
-Date: Mon, 21 Sep 2020 05:50:07 GMT
+Date: Mon, 21 Sep 2020 14:31:18 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 
-# END --------------------------
-2020-09-21T07:50:07.193000Z: TCP Forwarding 127.0.0.1:61026 (unknown) <--> 127.0.0.1:39103 (unknown)
 
-2020-09-21T07:50:07.194000Z: up:
+# END --------------------------
+2020-09-21T16:31:18.528000Z: TCP Forwarding 127.0.0.1:49321 (unknown) <--> 127.0.0.1:39103 (unknown)
+
+2020-09-21T14:31:18.529159Z: up:
 POST /oauth2/token HTTP/1.1
 Accept: application/json;charset=UTF-8
 Content-Type: application/x-www-form-urlencoded;charset=UTF-8
@@ -166,11 +178,15 @@ Connection: keep-alive
 Content-Length: 138
 
 
-2020-09-21T07:50:07.195000Z: up:
-grant_type=authorization_code&code=SvsQSUEMLx_yFDscfN_wDefqInVfIP_d7OxcfC0cK7o%3D&redirect_uri=http%3A%2F%2Flocalhost%3A39001%2Fauthorized
-2020-09-21T07:50:07.238000Z: down:
+# END --------------------------
+
+2020-09-21T14:31:18.529428Z: up:
+grant_type=authorization_code&code=u7ZtGDF_DqtFi9_Q0utb3_EWhF2eUhZnCwSmd6Hvazg%3D&redirect_uri=http%3A%2F%2Flocalhost%3A39001%2Fauthorized
+# END --------------------------
+
+2020-09-21T14:31:18.574713Z: down:
 HTTP/1.1 200 
-Set-Cookie: JSESSIONID=C25BDD1C70C4A479C74B1CEF3E5AD0EF; Path=/; HttpOnly
+Set-Cookie: JSESSIONID=1F043A0CD851976A065D51D1C1E2A2D0; Path=/; HttpOnly
 X-Content-Type-Options: nosniff
 X-XSS-Protection: 1; mode=block
 Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -179,21 +195,23 @@ Expires: 0
 X-Frame-Options: DENY
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
-Date: Mon, 21 Sep 2020 05:50:07 GMT
+Date: Mon, 21 Sep 2020 14:31:18 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 
 339
-{"access_token":"eyJraWQiOiI4MGJkNzI3YS02MTY2LTQzYzYtODdiNy1mZjZjM2Q5NTZmNzMiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImF1ZCI6Im1lc3NhZ2luZy1jbGllbnQiLCJuYmYiOjE2MDA2Njc0MDcsInNjb3BlIjpbIm1lc3NhZ2UucmVhZCIsIm1lc3NhZ2Uud3JpdGUiXSwiaXNzIjoiaHR0cHM6XC9cL29hdXRoMi5wcm92aWRlci5jb20iLCJleHAiOjE2MDA2NzEwMDcsImlhdCI6MTYwMDY2NzQwNywianRpIjoiMzVlNGMyZjQtYmI4OS00YjczLWJlMjItMmRjNTQ0NjkxZmJkIn0.mp2RGxr0tYuekhMaZDVch1_q-Gluu4HoZZq35STR6EI8KxxP5gvATD29yC-cez3kec6tioRsn4uTb-y5eAwnHlrCZ1dsXc3YNdiutxypzT7RVxcWtrY5m5Iain5BxBpCUvrNdy0mwxxolvJsDCh24VRihKLKaP6czZPQTQZr789XcHBBbyYWrYRsobSjt2Xs9U6qLfkcn6y7CexTZXdiu4y5OW8OrRpS0AM-Rvcr3MEy0mHTBHcfMlarHwo0_TgsCrIww6R_Q94WhgEqRXUcGUZI9A37oIclFYsr0r2MKURdb6y9XvBRGAUfMcqPnXr6fntf_F3u6ftdz46T_MgFyA","scope":"message.read message.write","token_type":"Bearer","expires_in":"3599"}
+{"access_token":"eyJraWQiOiJiNmVhMDM3My0wZWZlLTQyZmQtYTIyYi0yZmY0OThiYmJiYjIiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImF1ZCI6Im1lc3NhZ2luZy1jbGllbnQiLCJuYmYiOjE2MDA2OTg2NzgsInNjb3BlIjpbIm1lc3NhZ2UucmVhZCIsIm1lc3NhZ2Uud3JpdGUiXSwiaXNzIjoiaHR0cHM6XC9cL29hdXRoMi5wcm92aWRlci5jb20iLCJleHAiOjE2MDA3MDIyNzgsImlhdCI6MTYwMDY5ODY3OCwianRpIjoiNDE0M2E1YjctMzQ5OC00ZTQwLWEwNmQtNGRkZDM2MDk0YmE3In0.V0chAXFaUxTOLQ_pKr8fEONOG0LPzKOOamNWgRtG0Io2YGVI0NaTQKMe9xsHuaX7YOVhy5Tcto29Vc7WN0imXshRoYtcQfYdn4ZXETHjDzx4DqjxYdkC7NCYvYOUlrnEBXN64mIpkcD-diiueUNOaBS_NpVL5aQA3S9xQotWqx0g41QBjvjXvmQDyF5bs_YYyWA7AeubupVzf4nt5zd8SnBk1hOuGe7vcpGkfgJ-t16-7XcP5mIxoz_WHnHJmZiTK7pqjySbW5LRikphSj5dGMtgkSCVk2nzuGxiOQKat5FH3_Hsune5Q2lxHLvKu0ZsJycaXF-rSvd_QKtB-CmOsQ","scope":"message.read message.write","token_type":"Bearer","expires_in":"3599"}
+
 # END --------------------------
 
-2020-09-21T07:50:07.238000Z: down:
+2020-09-21T14:31:18.574880Z: down:
 0
 
-# END --------------------------
-2020-09-21T07:50:07.446000Z: TCP Forwarding 127.0.0.1:61030 (unknown) <--> 127.0.0.1:39103 (unknown)
 
-2020-09-21T07:50:07.448000Z: up:
+# END --------------------------
+2020-09-21T16:31:18.786000Z: TCP Forwarding 127.0.0.1:49325 (unknown) <--> 127.0.0.1:39103 (unknown)
+
+2020-09-21T14:31:18.787316Z: up:
 GET /oauth2/jwks HTTP/1.1
 Accept: application/json, application/jwk-set+json
 User-Agent: Java/11.0.3
@@ -201,7 +219,9 @@ Host: auth-server:39003
 Connection: keep-alive
 
 
-2020-09-21T07:50:07.451000Z: down:
+# END --------------------------
+
+2020-09-21T14:31:18.791289Z: down:
 HTTP/1.1 200 
 X-Content-Type-Options: nosniff
 X-XSS-Protection: 1; mode=block
@@ -211,11 +231,9 @@ Expires: 0
 X-Frame-Options: DENY
 Content-Type: application/json;charset=ISO-8859-1
 Content-Length: 455
-Date: Mon, 21 Sep 2020 05:50:07 GMT
+Date: Mon, 21 Sep 2020 14:31:18 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 
-{"keys":[{"kty":"RSA","e":"AQAB","use":"sig","kid":"80bd727a-6166-43c6-87b7-ff6c3d956f73","alg":"RS256","n":"pQzaFQCYO82tg_26tyvD9Krn3JiQagjiXBFEa7A2LGaYkz4vMIRXU4xKj1VCKdK5LgDBF2ss18yEEHwEmgsnfJc302WZyW1trgp5VXOmKziO7YPCQeS4GvhnUy9v46Y2gUJSPxfSuJjl7G6H8KWiNLOo_AKojhglSRNp2YFLWx-oHJPDvPkZZveZf1na7gB4MF_cogtUH6qpjf6qQ9iIDMPJZLjqBluLBb5i45_8KG831_nLZfk8nyv6PQQCH79YsclhFOjQMN30sLN_TZVGRCffp3xOPPaFv15fvzT8l-jDHw06AkyAqh9-2i8N5NupBJYYqkoH66iiFm80YRIXGw"}]}# END --------------------------
-2020-09-21T07:51:07.295000Z: TCP Forwarding 127.0.0.1:61026 <--> 127.0.0.1:39103 stopped.
-2020-09-21T07:51:07.494000Z: TCP Forwarding 127.0.0.1:61030 <--> 127.0.0.1:39103 stopped.
-2020-09-21T07:51:08.498000Z: TCP Forwarding 127.0.0.1:61021 <--> 127.0.0.1:39103 stopped.
+{"keys":[{"kty":"RSA","e":"AQAB","use":"sig","kid":"b6ea0373-0efe-42fd-a22b-2ff498bbbbb2","alg":"RS256","n":"j2dhuzCErFlwa6XQFGULKro6rssU3Pj9UwELA1LF1WTQ-abSm5dE-ec1Farcqltc4UpKQy4DsiPZVapG6Ivr8n96gIGWKMt24OoLof1cd7z42tA6nplpiPL_lCXdRbbYpFMuN9z1m5QQ4p16LcE0_vhCnJqO6mMVYAlXzy2YlMGpPihsUk5DXzcF2p6pTLBDHmpkt0Sis1gLkTlqeQMesuiav32FN8Ec8fRacGaT27vV44PgabCn3lKyhtB_XN-bNZaLOirmAGFKiK8QgC_WU3qR5snzk9cSO-4Zev_XEx_0EIfr5NgP1tHUdGRevka4MiCGalrK1E39k2Zs84doBw"}]}
+# END --------------------------
